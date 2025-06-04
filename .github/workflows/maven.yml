@@ -24,6 +24,6 @@ jobs:
       run: mvn clean install
       working-directory: myapp
 
-    - name: Run tests (JUnit 4.11)
+    - name: Run tests
       run: mvn test
       working-directory: myapp
