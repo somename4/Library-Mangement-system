@@ -23,3 +23,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
       working-directory: myapp
+
+    - name: Run tests (JUnit 4.11)
+      run: mvn test
+      working-directory: myapp
