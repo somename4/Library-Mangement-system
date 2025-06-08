@@ -1,16 +1,16 @@
 package app;
 
-import managers.ReaderManager;
+import entities.Customer;
+import services.CustomerInitiator;
+import services.ReaderManager;
 
 public class LibraryApp {
     
     public static void main(String[] args) {
-        try {
-            ReaderManager rm = new ReaderManager();
-        } catch (Exception e) {
-            // TODO: handle exception
+        CustomerInitiator ci = new CustomerInitiator();
+        for (Customer customer : CustomerInitiator.CUSTOMERS) {
+            customer.printCostumersInfo();
         }
-        
-        System.out.println(ReaderManager.TEST);
+    
     }
 }

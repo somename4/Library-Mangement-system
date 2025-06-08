@@ -1,4 +1,4 @@
-package managers;
+package services;
 
 import entities.*;
 
@@ -12,17 +12,11 @@ import java.util.List;
 
 
 public class ReaderManager {
-    public static List<Customer> CUSTOMERS = new ArrayList<Customer>();
+    
     public static List<Book> BOOKS = new ArrayList<Book>();
     public static List<BookCopy> BOOKCOPIES = new ArrayList<BookCopy>();
 
-    public static List<List<String>> TEST = new ArrayList<>();
-
-    public static final String COMMA_DELIMITER = ";";
-
-
     public ReaderManager() throws FileNotFoundException, IOException{
-        intiateCustomers();
     }
 
     /**
@@ -31,14 +25,17 @@ public class ReaderManager {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public void intiateCustomers() throws FileNotFoundException, IOException{
-        try (BufferedReader br = new BufferedReader(new FileReader("myapp\\src\\main\\resources\\customers.csv"))) {
+    public static List<String> readData(String path) throws FileNotFoundException, IOException{
+
+        List<String> rawData = new ArrayList<String>();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
             while ((line = br.readLine()) != null) {
-            String[] values = line.split(COMMA_DELIMITER);
-            TEST.add(Arrays.asList(values));
+                rawData.add(line);
             }
         }
+
+        return rawData;
     }
 
 

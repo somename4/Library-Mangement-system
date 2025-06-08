@@ -1,16 +1,31 @@
 package entities;
 
 public class Customer {
-    private long id;
-	private String name, firstName, adress, city;
-	private int zipCode;
+    private int id;
+	private String name, firstName, adress, city, zipCode;
 	private boolean feesPayed;
 
-	public long getId() {
+	public Customer(int id, String name, String firstName, String adress, String city, String zipCode,
+			boolean feesPayed) {
+		this.id= id;
+		this.name=name;
+		this.firstName=firstName;
+		this.adress=adress;
+		this.city=city;
+		this.zipCode=zipCode;
+		this.feesPayed=feesPayed;
+	}
+
+
+	public void printCostumersInfo(){
+		System.out.println(id+"\t"+name+"\t"+firstName+"\t"+adress+"\t"+city+"\t"+zipCode+"\t"+feesPayed);
+	}
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -46,11 +61,11 @@ public class Customer {
 		this.city = city;
 	}
 
-	public int getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
-	public void setZipCode(int zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
 
