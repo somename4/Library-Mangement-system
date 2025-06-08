@@ -1,5 +1,5 @@
-- work on the structer of the directory
-- add more classes for services 
-- add resources
+- add book intiator
+- add book copy intiator
+- add a query manager
 - add documentation
 - add customized exceptions
