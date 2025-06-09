@@ -13,8 +13,9 @@ import java.util.List;
 
 public class ReaderManager {
     
-    public static List<Book> BOOKS = new ArrayList<Book>();
+    
     public static List<BookCopy> BOOKCOPIES = new ArrayList<BookCopy>();
+    
 
     public ReaderManager() throws FileNotFoundException, IOException{
     }

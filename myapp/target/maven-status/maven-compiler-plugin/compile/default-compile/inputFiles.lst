@@ -1,1 +1,8 @@
 D:\Library-Mangement-system\myapp\src\main\java\app\LibraryApp.java
+D:\Library-Mangement-system\myapp\src\main\java\services\CustomerInitiator.java
+D:\Library-Mangement-system\myapp\src\main\java\interfaces\EntityIntiator.java
+D:\Library-Mangement-system\myapp\src\main\java\entities\Book.java
+D:\Library-Mangement-system\myapp\src\main\java\entities\BookCopy.java
+D:\Library-Mangement-system\myapp\src\main\java\entities\Customer.java
+D:\Library-Mangement-system\myapp\src\main\java\services\BookIntiator.java
+D:\Library-Mangement-system\myapp\src\main\java\services\ReaderManager.java
