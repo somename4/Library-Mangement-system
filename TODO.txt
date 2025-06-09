@@ -1,5 +1,7 @@
-- add book intiator
-- add book copy intiator
+- add Printer classes
 - add a query manager
+- Console menu
 - add documentation
 - add customized exceptions
+- add constrains
+- add validations
