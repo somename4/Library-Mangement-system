@@ -24,7 +24,7 @@ public class Book {
 	}
 
 	public void printBookInfo(){
-		System.out.println(isbn+ "\t"+ titel+ "\t"+ authors.toString()+ "\t"+ year.getValue()+ "\t"
+		System.out.println(isbn+ "\t"+ titel+ "\t"+ authors.toString()+ "\t"+ year.toString()+ "\t"
 		+ publsiher + "\t" + city + "\t" + edition);
 	}
 

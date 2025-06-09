@@ -1,26 +1,30 @@
 package entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class BookCopy {
     	//properties of the book Copy
 	private long id;
 	private String bookIsbn, shelfLocation;
-	private Date addedToLibrary, lentDate;
+	private LocalDate addedToLibrary, lentDate;
 	private boolean lent;
 	
 	
 	
 	public BookCopy(long id, String bookIsbn, String shelfLocation, 
-			Date addedToLibrary, boolean lent, Date lentDate) {
+			LocalDate addedToLibrary, boolean lent, LocalDate lentDate) {
 		this.id = id;
 		this.bookIsbn = bookIsbn;
 		this.shelfLocation = shelfLocation;
 		this.addedToLibrary = addedToLibrary;
 		this.lent = lent;
 		this.lentDate = lentDate;
-		
-		
+	}
+
+
+
+	public void printBookCopyInfo(){
+		System.out.println(id + "\t" + bookIsbn + "\t" + shelfLocation + "\t" + addedToLibrary.toString() + "\t" + Boolean.toString(lent) + "\t" + lentDate.toString());
 	}
 
 
@@ -48,12 +52,12 @@ public class BookCopy {
 	}
 
 
-	public Date getAddedToLibrary() {
+	public LocalDate getAddedToLibrary() {
 		return addedToLibrary;
 	}
 
 
-	public void setAddedToLibrary(Date addedToLibrary) {
+	public void setAddedToLibrary(LocalDate addedToLibrary) {
 		this.addedToLibrary = addedToLibrary;
 	}
 
@@ -78,12 +82,12 @@ public class BookCopy {
 	}
 
 
-	public Date getLentDate() {
+	public LocalDate getLentDate() {
 		return lentDate;
 	}
 
 
-	public void setLentDate(Date lentDate) {
+	public void setLentDate(LocalDate lentDate) {
 		this.lentDate = lentDate;
 	}
 	

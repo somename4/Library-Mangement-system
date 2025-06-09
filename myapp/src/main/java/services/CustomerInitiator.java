@@ -1,18 +1,15 @@
 package services;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import entities.Customer;
 import interfaces.EntityIntiator;
 
-public class CustomerInitiator implements EntityIntiator{
+public class CustomerInitiator implements EntityIntiator<Customer>{
 
     private final String path= "myapp\\src\\main\\resources\\customers.csv";
-    public static List<Customer> CUSTOMERS = new ArrayList<Customer>();
+    public static List<Customer> CUSTOMERS = new ArrayList<>();
 
     public CustomerInitiator(){
         try {
@@ -23,7 +20,7 @@ public class CustomerInitiator implements EntityIntiator{
     }
 
     @Override
-    public List<Customer> initiateEntity(List rawData) {
+    public List<Customer> initiateEntity(List<String> rawData) {
         String[] arr;
         for(int i = 1; i<rawData.size();i++){
             

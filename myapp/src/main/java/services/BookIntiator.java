@@ -8,13 +8,13 @@ import java.util.List;
 import entities.Book;
 import interfaces.EntityIntiator;
 
-public class BookIntiator implements EntityIntiator{
+public class BookIntiator implements EntityIntiator<Book>{
 
 
 
-    public static List<Book> BOOKS = new ArrayList<Book>();
+    public static List<Book> BOOKS = new ArrayList<>();
     private final String path= "myapp\\src\\main\\resources\\books.csv";
-    
+
     public BookIntiator(){
         try {
            initiateEntity(ReaderManager.readData(path));
@@ -24,7 +24,7 @@ public class BookIntiator implements EntityIntiator{
     }    
 
     @Override
-    public List<Book> initiateEntity(List rawData) {
+    public List<Book> initiateEntity(List<String> rawData) {
         String[] arr;
 
         for(int i = 1; i<rawData.size();i++){
